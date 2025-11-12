@@ -5,9 +5,9 @@ namespace TestingPlatform.Domain.Models
     {
         public int Id { get; set; }
 
-        public DateTimeOffset StartedAt { get; set; } = DateTimeOffset.Now;
+        public DateTime StartedAt { get; set; } = DateTime.Now;
 
-        public DateTimeOffset? SubmittedAt { get; set; }
+        public DateTime? SubmittedAt { get; set; }
 
         public int? Score { get; set; }
 

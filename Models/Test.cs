@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using TestingPlatform.Domain.Enums;
 
 namespace TestingPlatform.Domain.Models
 {
@@ -9,9 +10,9 @@ namespace TestingPlatform.Domain.Models
         public required string Description { get; set; }
         public bool IsRepeatable { get; set; } = false;
         public TestType Type { get; set; }
-        public DateTimeOffset CreatedAt { get; set; } = DateTimeOffset.Now;
-        public required DateTimeOffset PublishedAt { get; set; }
-        public required DateTimeOffset Deadline { get; set; }
+        public DateTime CreatedAt { get; set; } = DateTime.Now;
+        public required DateTime PublishedAt { get; set; }
+        public required DateTime Deadline { get; set; }
         public int DurationMinutes { get; set; }
         public bool IsPublic { get; set; } = false;
         public int PassingScore { get; set; }
@@ -26,18 +27,7 @@ namespace TestingPlatform.Domain.Models
         public List<Course> Courses { get; set; } = new List<Course>();
         public List<Direction> Directions { get; set; } = new List<Direction>();
     }
-    public enum TestType
-    {
-        Education = 1,
-        Activity = 2,
-        Other = 3
-    };
-    public enum AnswerType
-    {
-        Single = 1,
-        Multiple = 2,
-        Text = 3
-    }
+    
 }
 
 
