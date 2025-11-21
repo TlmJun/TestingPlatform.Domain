@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using TestingPlatform.Domain.Enums;
 
 namespace TestingPlatform.Domain.Models
 {
@@ -10,7 +11,7 @@ namespace TestingPlatform.Domain.Models
 
         [MaxLength(2000)]
         public string? Description { get; set; }
-        public required string AnswerType { get; set; }
+        public required AnswerType AnswerType { get; set; }
         public bool IsScoring { get; set; } = true;
         public int? MaxScore { get; set; }
         public required int TestId { get; set; }
