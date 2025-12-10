@@ -1,5 +1,4 @@
 ﻿using TestingPlatform.Domain.Enums;
-
 namespace TestingPlatform.Domain.Models;
 public class User
 {
@@ -13,4 +12,6 @@ public class User
     public UserRole Role { get; set; }
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     public Student? Student { get; set; }
+    public List<RefreshToken> RefreshTokens { get; set; }
 }
+
