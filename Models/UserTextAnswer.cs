@@ -7,7 +7,7 @@ namespace TestingPlatform.Domain.Models
 
         public required string TextAnswer { get; set; }
 
-        public required int UserAttemptAnswerId { get; set; }
+        public int UserAttemptAnswerId { get; set; }
         public UserAttemptAnswer? UserAttemptAnswer { get; set; }
     }
 }

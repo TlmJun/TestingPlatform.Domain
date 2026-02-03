@@ -14,4 +14,3 @@ public class User
     public Student? Student { get; set; }
     public List<RefreshToken> RefreshTokens { get; set; }
 }
-

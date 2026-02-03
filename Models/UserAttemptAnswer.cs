@@ -12,9 +12,9 @@ namespace TestingPlatform.Domain.Models
         public required int AttemptId { get; set; }
 
         public required int QuestionId { get; set; }
-        public Attempt? Attempts { get; set; }
-        public Question? Questions { get; set; }
-        public List<UserSelectedOption> UserSelectedOptions { get; set; } = new List<UserSelectedOption>();
+        public Attempt Attempts { get; set; }
+        public Question Questions { get; set; }
+        public List<UserSelectedOption>? UserSelectedOptions { get; set; } = new List<UserSelectedOption>();
         public UserTextAnswer? UserTextAnswers { get; set; }
     }
 }
